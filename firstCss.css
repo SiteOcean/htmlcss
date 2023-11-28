@@ -1,0 +1,23 @@
+.a{
+    color: red;
+}
+
+.bb{
+
+
+    color: yellow;
+}
+
+/* Styles for screens with a width less than or equal to 768px */
+@media screen and (max-width: 768px) {
+    .a{
+        color: green;
+    }
+}
+
+/* Styles for screens with a width greater than 768px */
+@media screen and (min-width: 769px) {
+    .a{
+        color: rgb(88, 140, 218);
+    }
+}

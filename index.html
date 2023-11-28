@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="./firstCss.css">
+    <script src="./firstJs.js"></script>
+
+    <style>
+        .b{
+            font-weight: bold;
+        }
+        .container div{
+            display: flex;
+            gap: 10px;
+            background-color: aqua;
+            padding: 20px;
+            border-style: solid;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 10vh 30vh 30vh; 
+            grid-auto-rows: 200px;
+            padding: 20px;
+            gap: 1px;
+        }
+        .box1{
+            grid-column: span 3;
+            display: flex;
+        }
+        .box3{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box4{
+            grid-row: span 3;
+        }
+        .box5{
+            grid-column: span 2;
+            grid-row: span 2;
+            min-height: 200px;
+        }
+        .box6{
+            grid-column: span 2;
+        }
+        .box8{
+            grid-column: span 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="b" id="aa" onclick="test()" style="background-color: aqua; padding: 10px;">
+        hello world!
+    </div>
+    <button onclick="test()">click</button>
+    <div class="container">
+            <div class="box1">
+                <p style="font-weight: 300;">sdfsd</p>
+                 <p style="font-weight: 300;">ddsf</p>
+                </div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+            <div class="box4">4</div>
+            <div class="box5">5</div>
+            <div class="box6">6</div>
+            <div class="box7">7</div>
+            <div class="box8">8</div>
+          
+    </div>
+    <script>
+
+        const test=()=>{
+            a=10;
+            console.log(a)
+            myFunctin();
+            var a;
+        }
+        function myFunctin() {
+            var elements = document.getElementsByClassName("box1");
+            
+            if (elements.length > 0) {
+             
+            var el = elements[0]
+            var n = el.querySelector("p:nth-child(1)")
+            n.style.backgroundColor = "red";
+            }
+     
+            
+        }
+
+    </script>
+</body>
+
+</html>
